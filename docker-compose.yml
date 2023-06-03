@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+ databases:
+   image: postgres
+   environment:
+     POSTGRES_DB: checklist
+     POSTGRES_USER: root
+     POSTGRES_PASSWORD: 123456
+   volumes:
+      - ./data:/var/lib/postgresql/data
+   ports:
+      - 5432:5432
