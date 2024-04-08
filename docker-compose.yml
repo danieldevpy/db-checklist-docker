@@ -11,3 +11,12 @@ services:
       - ./data:/var/lib/postgresql/data
    ports:
       - 5432:5432
+ rabbitmq:
+   image: rabbitmq
+   ports:
+     - 5672:5672
+   volumes:
+     - .cccc/rabbitmq/data:/var/lib/rabbitmq
+   environment:
+     - RABBITMQ_DEFAULT_USER=guest
+     - RABBITMQ_DEFAULT_PASS=guest
